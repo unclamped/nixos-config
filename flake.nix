@@ -1,5 +1,5 @@
 {
-  description = "Tired of I.T! NixOS Configuration";
+  description = "Maru's NixOS Configuration. Based on Tired Of I.T!'s";
 
   nixConfig = {
     experimental-features = [ "nix-command" "flakes" ];
@@ -70,42 +70,8 @@
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
-        expedition = lib.nixosSystem { # Server Added 2024-07-04
-          modules = [ ./hosts/expedition ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        seed = lib.nixosSystem { # Server Added 2024-03-26
-          modules = [ ./hosts/seed ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        tentacle = lib.nixosSystem { # Server Added 2023-10-25
-          modules = [ ./hosts/tentacle ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        beef = lib.nixosSystem { # Workstation
-          modules = [ ./hosts/beef ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        beer = lib.nixosSystem { # Bar
-          modules = [ ./hosts/beer ];
-          specialArgs = {
-            inherit inputs outputs;
-            kioskUsername = "dave";
-            kioskURL = "https://beer.tiredofit.ca";
-          };
-        };
-
-        butcher = lib.nixosSystem { # Local Server
-          modules = [ ./hosts/butcher ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        nakulaptop = lib.nixosSystem { # Laptop
-          modules = [ ./hosts/nakulaptop ];
+        turing = lib.nixosSystem { # Workstation
+          modules = [ ./hosts/turing ];
           specialArgs = { inherit inputs outputs; };
         };
       };

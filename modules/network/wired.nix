@@ -84,7 +84,7 @@ in
              address = mkIf (cfg.type == "static") [
                cfg.ip
              ];
-             #dns = mkIf (cfg.type == "static") [ ## TODO FIX THIS
+             #dns = mkIf (cfg.type == "static") [ ## TODO FIX THIS <- dns is prolly broken, I remember having pain with this too
              #  "1.1.1.1"
              #  "1.0.0.1"
              #];

@@ -1,3 +1,3 @@
 pkgs: {
-  asus-touchpad-numpad = pkgs.python3.pkgs.callPackage ./asus-touchpad-numpad { };
+  # package = pkgs.python3.pkgs.callPackage ./package { };
 }
