@@ -254,7 +254,7 @@ in
       };
       server = mkOption {
         type = types.str;
-        default = "pulseaudio";
+        default = "pipewire";
         description = "Which sound server (pulseaudio/pipewire)";
       };
     };

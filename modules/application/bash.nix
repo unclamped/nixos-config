@@ -1,17 +1,9 @@
 {config, lib, pkgs, ...}:
 let
   cfg = config.host.application.bash;
-  shellAliases = {
-    ".." = "cd .." ;
-    "..." = "cd ..." ;
-    home = "cd ~" ;
-    fuck = "sudo $(history -p !!)" ;                                    # run last command as root
-    mkdir = "mkdir -p" ;                                                # no error, create parents
-    scstart = "systemctl start $@";                                     # systemd service start
-    scstop = "systemctl stop $@";                                       # systemd service stop
-    scenable = "systemctl disable $@";                                  # systemd service enable
-    scdisable = "systemctl disable $@";                                 # systemd service disable
-  };
+
+  aliasesModule = import ./aliases.nix { inherit lib; };
+  shellAliases = aliasesModule.shellAliases;
 in
   with lib;
 {
@@ -32,7 +24,7 @@ in
 
     programs = {
       bash = {
-        enableCompletion = true ; # 24.11 - Phasing out in place of completion.enable
+        enableCompletion = true; # 24.11 - Phasing out in place of completion.enable
         #completion.enable = true;
         inherit shellAliases;
         shellInit = ''
@@ -61,18 +53,6 @@ in
 
               ## Do not store a duplicate of the last entered command and any commands prefixed with a space
               HISTCONTROL=ignoreboth
-
-              if [ -d "/var/local/data" ] ; then
-                  alias vld='cd /var/local/data'
-              fi
-
-              if [ -d "/var/local/db" ] ; then
-                  alias vldb='cd /var/local/db'
-              fi
-
-              if [ -d "/var/local/data/_system" ] ; then
-                  alias vlds='cd /var/local/data/_system'
-              fi
 
               if command -v "nmcli" &>/dev/null; then
                   alias wifi_scan="nmcli device wifi rescan && nmcli device wifi list"  # rescan for network

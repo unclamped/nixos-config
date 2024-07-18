@@ -27,6 +27,9 @@ in
       bash.shellAliases = {
         "more" = "less"; # pager
       };
+      zsh.shellAliases = {
+        "more" = "less"; # pager
+      };
     };
   };
 }

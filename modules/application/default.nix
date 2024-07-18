@@ -24,12 +24,13 @@ with lib;
     ./lsof.nix
     ./mtr.nix
     ./nano.nix
-    ./ncdu.nix
+    ./g.nix
     ./pciutils.nix
     ./psmisc.nix
     ./rsync.nix
     ./strace.nix
     ./tmux.nix
     ./wget.nix
+    ./zsh.nix
   ];
 }

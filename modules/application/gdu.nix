@@ -1,23 +1,23 @@
 {config, lib, pkgs, ...}:
 
 let
-  cfg = config.host.application.ncdu;
+  cfg = config.host.application.gdu;
 in
   with lib;
 {
   options = {
-    host.application.ncdu = {
+    host.application.gdu = {
       enable = mkOption {
         default = false;
         type = with types; bool;
-        description = "Enables ncurses graphical disk usage";
+        description = "Enables go DiskUsage()";
       };
     };
   };
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      ncdu
+      gdu
     ];
   };
 }

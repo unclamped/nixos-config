@@ -54,6 +54,38 @@ in
           }
         '';
       };
+      zsh = {
+        shellInit = ''
+          pwgen() {
+            local pwords=${1:-4} # Default to 4 if no argument is passed
+            local genpassword=()
+            local counter=1
+
+            for _ in ${(seq 1 $pwords)}; do
+                local s_password
+                case $counter in
+                    (2|4|6|8|10|12|14|16)
+                        s_password=$(diceware -n 1)
+                        s_password=${s_password^^}
+                        ;;
+                    (1|3|5|7|9|11|13|15)
+                        s_password=$(diceware -n 1 --no-caps)
+                        s_password=${s_password,,}
+                        ;;
+                esac
+
+                if [[ $counter -lt $pwords ]]; then
+                    s_password+="-"
+                fi
+
+                genpassword+=($s_password) # Add to array instead of concatenation
+                ((counter++))
+            done
+
+            echo "${genpassword[*]}" # Print the entire array as a space-separated string
+            }
+        ''
+      }
     };
   };
 }

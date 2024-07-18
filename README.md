@@ -14,7 +14,7 @@ If you would like to base your own configuration from this, you will need to be 
 - Support for **RAID** configurations
 - Deployment of secrets using **sops-nix**
 - Some real interesting **bash scripts** for automating common tasks
-- **Declarative** **themes** and **wallpapers** with **nix-colors**
+- **Declarative** **themes** and **wallpapers** with **nix-colors** <- so that was a fucken lie lmao. i'll use stylix l8r
 
 - I ~sort of blew~spent the summer of 2023 moving into this configuration after waving a fond farewell to near 2 decades of running Arch Linux. This, as with life, is still WIP. I documented the process on the [Tired of IT! NixOS](https://notes.tiredofit.ca/books/linux/chapter/nixos) chapter on my website.
 
