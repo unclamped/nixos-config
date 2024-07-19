@@ -91,6 +91,8 @@ boot = {
         open = mkDefault false;
         nvidiaSettings = false;
         nvidiaPersistenced = true;
+        
+        # screen tearing begone. gotta see if I need to do this as well on wayland. TODO
         forceFullCompositionPipeline = true;
       };
 
