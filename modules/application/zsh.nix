@@ -8,7 +8,7 @@ in
   with lib;
 {
   options = {
-    host.application.bash = {
+    host.application.zsh = {
       enable = mkOption {
         default = false;
         type = with types; bool;
