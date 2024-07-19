@@ -24,7 +24,7 @@ with lib;
     ./lsof.nix
     ./mtr.nix
     ./nano.nix
-    ./g.nix
+    ./gdu.nix
     ./pciutils.nix
     ./psmisc.nix
     ./rsync.nix
