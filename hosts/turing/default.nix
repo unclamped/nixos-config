@@ -16,9 +16,6 @@
   host = {
     feature = {
       appimage.enable = true;
-      development = {
-        crosscompilation = false;
-      };
       gaming = {
         gamemode.enable = true;
         gamescope.enable = false;
