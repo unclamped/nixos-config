@@ -40,7 +40,7 @@ in
 
       openssh.authorizedKeys.keys = [ (builtins.readFile ./ssh.pub) ];
       #hashedPasswordFile = mkDefault config.sops.secrets.maru-password.path;
-      password = "temporalpass"
+      password = "temporalpass";
     };
 
     #sops.secrets.maru-password = {
