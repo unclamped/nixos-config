@@ -1,11 +1,9 @@
-{
-  imports = [ ./disko-config.nix ];
-  disko.devices.disk.main.device = "/dev/nvme0n1";
-}
+# TODO: figure out a way to make this work: disko.devices.disk.main.device = "/dev/nvme0n1";
 {
   disko.devices = {
     disk = {
       main = {
+        device = "/dev/nvme0n1";
         type = "disk";
         content = {
           type = "gpt";
