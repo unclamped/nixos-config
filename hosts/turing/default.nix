@@ -59,8 +59,8 @@
     };
     role = "desktop";
     host.feature.development.crosscompilation = false;
-    bluetooth.enable = false;
-    wireless.enable = false;
+    hardware.bluetooth.enable = false;
+    hardware.wireless.enable = false;
     user = {
       maru.enable = true;
       root.enable = true;
