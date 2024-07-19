@@ -85,7 +85,7 @@ in
             echo "''${genpassword[*]}" # Print the entire array as a space-separated string
             }
         '';
-      }
+      };
     };
   };
 }
