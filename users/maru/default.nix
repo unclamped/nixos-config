@@ -39,12 +39,13 @@ in
       ];
 
       openssh.authorizedKeys.keys = [ (builtins.readFile ./ssh.pub) ];
-      hashedPasswordFile = mkDefault config.sops.secrets.maru-password.path;
+      #hashedPasswordFile = mkDefault config.sops.secrets.maru-password.path;
+      password = "temporalpass"
     };
 
-    sops.secrets.maru-password = {
-      sopsFile = mkDefault ../secrets.yaml;
-      neededForUsers = mkDefault true;
-    };
+    #sops.secrets.maru-password = {
+    #  sopsFile = mkDefault ../secrets.yaml;
+    #  neededForUsers = mkDefault true;
+    #};
   };
 }

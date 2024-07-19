@@ -1,5 +1,6 @@
+# https://notes.tiredofit.ca/books/linux/page/secrets-management
 keys:
-  - &host_ age13uqlmzsyxdxxxkvsql7utjeqyt969jdjl6nh6d0gdqdvz6re05fq6t8xge # TODO: Do nix-sops setup
+  - &host_turing age13uqlmzsyxdxxxkvsql7utjeqyt969jdjl6nh6d0gdqdvz6re05fq6t8xge # TODO: Get this later with cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age
 creation_rules:
   - path_regex: hosts/common/secrets/.*
     key_groups:
