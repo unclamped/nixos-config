@@ -16,6 +16,9 @@
   host = {
     feature = {
       appimage.enable = true;
+      development = {
+        crosscompilation = false;
+      };
       gaming = {
         gamemode.enable = true;
         gamescope.enable = false;
@@ -58,7 +61,6 @@
       hostname = "turing";
     };
     role = "desktop";
-    host.feature.development.crosscompilation = false;
     hardware.bluetooth.enable = false;
     hardware.wireless.enable = false;
     user = {
