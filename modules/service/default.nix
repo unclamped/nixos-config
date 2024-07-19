@@ -11,6 +11,6 @@ with lib;
     ./ssh.nix
     ./syncthing.nix
     ./vscode_server.nix
-    ./zabbix_agent.nix
+    # ./zabbix_agent.nix
   ];
 }
