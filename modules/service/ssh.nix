@@ -55,7 +55,6 @@ in
     services = {
       openssh = {
         enable = true;
-        package = pkgs.unstable.openssh;
         hostKeys =
           if config.host.filesystem.impermanence.enable
           then
@@ -137,6 +136,8 @@ in
     };
 
     programs.ssh = {
+      # I don't fucken know why, but this was in services.openssh. That option does not exist
+      package = pkgs.unstable.openssh
       # Each hosts public key
       knownHosts = builtins.mapAttrs
         (name: _: {
