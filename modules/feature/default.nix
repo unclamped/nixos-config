@@ -14,7 +14,7 @@ with lib;
     ./home_manager.nix
     ./fonts.nix
     ./s3ql.nix
-    ./secrets.nix
+    # ./secrets.nix
     ./security.nix
   ];
 }

@@ -62,7 +62,7 @@
     };
     feature = {
       home-manager.enable = mkDefault true;
-      secrets.enable = mkDefault true;
+      # secrets.enable = mkDefault true;
     };
     # Commenting this out because my net does not have a domain name besides what comes
     # from my ISP. Could I consider this as a Personal TODO if I want to migrate to maru.olcese.com.ar
