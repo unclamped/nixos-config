@@ -17,7 +17,7 @@ in
   config = mkIf config.host.user.maru.enable {
     users.users.maru = {
       isNormalUser = true;
-      shell = pkgs.bashInteractive;
+      shell = pkgs.zsh;
       uid = 1337;
       group = "users" ;
       extraGroups = [
