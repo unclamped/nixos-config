@@ -2,7 +2,7 @@
 let
   inherit (config.networking) hostName;
   hosts = outputs.nixosConfigurations;
-  pubKey = host: ../../hosts/${host}/secrets/ssh_host_ed25519_key.pub;
+  # pubKey = host: ../../hosts/${host}/secrets/ssh_host_ed25519_key.pub;
   cfg = config.host.service.ssh;
   logLevel =
     if config.host.network.firewall.fail2ban.enable
@@ -137,15 +137,15 @@ in
 
     programs.ssh = {
       # I don't fucken know why, but this was in services.openssh. That option does not exist
-      package = pkgs.unstable.openssh
+      package = pkgs.unstable.openssh;
       # Each hosts public key
-      knownHosts = builtins.mapAttrs
+      /* knownHosts = builtins.mapAttrs
         (name: _: {
           publicKeyFile = pubKey name;
           extraHostNames =
             (lib.optional (name == hostName) "localhost");
         })
-        hosts;
+        hosts; */
     };
 
     systemd.services.sshd.preStart = ''

@@ -5,7 +5,7 @@ with lib;
   imports = [
     ./docker_container_manager.nix
     ./eternal_terminal.nix
-    ./fluent-bit.nix
+    # ./fluent-bit.nix
     ./logrotate.nix
     ./monit.nix
     ./ssh.nix

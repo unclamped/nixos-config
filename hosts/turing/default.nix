@@ -56,6 +56,7 @@
     };
     network = {
       hostname = "turing";
+      domainname = config.host.network.hostname;
     };
     role = "desktop";
     hardware.bluetooth.enable = false;

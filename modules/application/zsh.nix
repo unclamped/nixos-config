@@ -2,7 +2,7 @@
 let
   cfg = config.host.application.zsh;
   
-  aliasesModule = import ./aliases.nix { inherit lib; };
+  aliasesModule = import ../feature/aliases.nix { inherit lib; };
   shellAliases = aliasesModule.shellAliases;
 in
   with lib;
@@ -24,6 +24,7 @@ in
 
     programs = {
       zsh = {
+        enable = true;
         enableCompletion = true;
         inherit shellAliases;
         shellInit = ''

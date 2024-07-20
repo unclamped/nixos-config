@@ -2,7 +2,7 @@
 let
   cfg = config.host.application.bash;
 
-  aliasesModule = import ./aliases.nix { inherit lib; };
+  aliasesModule = import ../feature/aliases.nix { inherit lib; };
   shellAliases = aliasesModule.shellAliases;
 in
   with lib;

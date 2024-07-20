@@ -2,7 +2,7 @@
 with lib;
 {
   imports = [
-    ./ldap
-    ./sssd
+    # ./ldap
+    # ./sssd
   ];
 }

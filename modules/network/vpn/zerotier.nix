@@ -112,7 +112,7 @@ in
       '';
     };
 
-    sops.secrets = {
+    /* sops.secrets = {
       ## Only read these secrets if the secret exists
       "zerotier/networks" = mkIf (builtins.pathExists ../../../hosts/${config.host.network.hostname}/secrets/zerotier/networks.yaml)  {
         sopsFile = ../../../hosts/${config.host.network.hostname}/secrets/zerotier/networks.yaml;
@@ -126,7 +126,7 @@ in
         sopsFile = ../../../hosts/${config.host.network.hostname}/secrets/zerotier/identity.yaml;
         restartUnits = [ "zerotierone.service" ];
       };
-    };
+    }; */
 
     ### Not really necessary with above work
     #host.filesystem.impermanence.directories = lib.mkIf config.host.filesystem.impermanence.enable [
