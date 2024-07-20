@@ -49,7 +49,7 @@ in
           ];
         };
         swap = {
-          enable = mkDefault true;
+          enable = mkDefault false;
           type = mkDefault "partition";
         };
         tmp.tmpfs.enable = mkDefault true;
