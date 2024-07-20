@@ -1,3 +1,4 @@
+# TODO: Also make rollbacks in home and persist certain dirs of the home
 {config, inputs, lib, outputs, pkgs, ...}:
 
 let
