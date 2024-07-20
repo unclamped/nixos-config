@@ -13,6 +13,11 @@
     ];
   };
 
+  environment.systemPackages = [
+    pkgs.librewolf
+    pkgs.vscodium
+  ];
+
   host = {
     feature = {
       appimage.enable = true;
