@@ -21,6 +21,7 @@
   host = {
     feature = {
       appimage.enable = true;
+      secrets.enable = true;
       gaming = {
         gamemode.enable = true;
         gamescope.enable = false;
