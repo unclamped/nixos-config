@@ -41,9 +41,10 @@
       impermanence.enable = true;
       encryption.enable = true;
       ntfs.enable = true;
-      swap = {
-        partition = "disk/by-uuid/d7ad2715-9ba7-4ba6-b8ce-f006f8fee66b";
-      };
+      #apparently with disko this is not needed
+      #swap = {
+      #  partition = "disk/by-uuid/d7ad2715-9ba7-4ba6-b8ce-f006f8fee66b";
+      #};
       tmp.tmpfs.enable = true;
     };
     hardware = {
