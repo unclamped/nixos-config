@@ -1,12 +1,13 @@
 # https://notes.tiredofit.ca/books/linux/page/secrets-management
 keys:
-  - &host_turing age1y90xcy4hhfwazd9wy2yukkfsp55hzywxwjsyp0wy9jxtfph2ap0spmaug9
+  - &host_turing age1x744zrnwl5s739zp9l43xnkzn7ewdxgatmwg30fh6v0le4v8svlqryej5v
   - &user_maru age1xhv5zfrmzfqn9w745sw4szuyxn3sxek5k4cfjjesrn8ag7av7u6snp6yj5
 creation_rules:
   - path_regex: hosts/common/secrets/.*
     key_groups:
       - age:
           - *host_turing
+          - *user_maru
   - path_regex: users/secrets.yaml
     key_groups:
       - age:
