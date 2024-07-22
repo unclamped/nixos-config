@@ -38,10 +38,6 @@ in
               setopt HIST_VERIFY             # Require confirmation before saving history
               setopt HIST_IGNORE_SPACE       # Ignore commands starting with a space
               setopt HIST_IGNORE_DUPS        # Ignore duplicate commands
-              setopt HIST_IGNORE_SUBSTR      # Ignore commands containing certain substrings
-              setopt HIST_IGNORE_CASE        # Ignore case when comparing history lines
-              setopt HIST_IGNORE_MOTD        # Ignore the message-of-the-day
-              setopt HIST_IGNORE_PATTERNS="ls:ll:ls -alh:pwd:clear:history:ps" # Ignore specific commands
 
               # Conditional aliases based on command availability
               if command -v nmcli > /dev/null; then
