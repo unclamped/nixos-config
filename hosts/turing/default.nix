@@ -76,6 +76,6 @@
 
   services.xserver.xkb = {
     layout = "es"; # or latam?
-    variat = "nodeadkeys"
+    variat = "nodeadkeys";
   };
 }
