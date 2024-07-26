@@ -5,6 +5,7 @@
     ./backend
     ./displayManager
     ./windowManager
+    #./stylix.nix
   ];
 
   options = {
@@ -18,6 +19,11 @@
         default = false;
         type = with types; bool;
         description = "Enables graphics acceleration";
+      };
+      stylix = mkOption {
+        default = false;
+        type = with types; bool;
+        description = "Enables Stylix for uniform color schemes";
       };
       backend = mkOption {
         type = types.enum ["x" "wayland" null];

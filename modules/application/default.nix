@@ -23,6 +23,7 @@ with lib;
     ./links.nix
     ./lsof.nix
     ./mtr.nix
+    ./mullvad.nix
     ./nano.nix
     ./gdu.nix
     ./pciutils.nix
