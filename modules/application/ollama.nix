@@ -18,7 +18,7 @@ in
   config = mkIf cfg.enable {
     services.ollama = {
       enable = true;
-      acceleration = mkIf (device.gpu == "nvidia" || device.gpu == "hybrid-nvidia")  { "cuda" };
+      acceleration = mkIf (device.gpu == "nvidia" || device.gpu == "hybrid-nvidia") "cuda";
     };
   };
 }
