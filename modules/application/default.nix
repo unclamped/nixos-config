@@ -25,6 +25,7 @@ with lib;
     ./mtr.nix
     ./mullvad.nix
     ./nano.nix
+    ./ollama.nix
     ./gdu.nix
     ./pciutils.nix
     ./psmisc.nix

@@ -66,6 +66,7 @@
       domainname = config.host.network.hostname;
     };
     application.mullvad.enable = true;
+    application.ollama.enable = true;
     role = "desktop";
     hardware.bluetooth.enable = false;
     hardware.wireless.enable = false;
