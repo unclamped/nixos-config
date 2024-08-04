@@ -1,7 +1,7 @@
 { config, lib, ... }:
 with lib;
 let
-  device = config.host.hardware ;
+  device = config.host.hardware;
 in {
   config = mkIf (device.gpu == "intel" || device.gpu == "hybrid-nv" )  {
 

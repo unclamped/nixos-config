@@ -2,6 +2,7 @@
 
 let
   cfg = config.host.application.ollama;
+  device = config.host.hardware;
 in
   with lib;
 {
