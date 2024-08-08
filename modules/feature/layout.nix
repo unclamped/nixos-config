@@ -20,7 +20,7 @@ in
     };
   };
 
-  config = mkIf cfg.enable {
+  config = {
     services.xserver.xkb = {
       layout = cfg.layout;
       variant = cfg.variant;
