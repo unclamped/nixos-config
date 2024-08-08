@@ -22,6 +22,10 @@
     feature = {
       appimage.enable = true;
       secrets.enable = true;
+      keeblayout = {
+        layout = "es";
+        variant = "nodeadkeys";
+      };
       gaming = {
         gamemode.enable = true;
         gamescope.enable = false;
@@ -74,10 +78,5 @@
       maru.enable = true;
       root.enable = true;
     };
-  };
-
-  services.xserver.xkb = {
-    layout = "es"; # or latam?
-    variant = "nodeadkeys";
   };
 }

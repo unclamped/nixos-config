@@ -43,7 +43,6 @@ in {
         desktopManager = {
           xterm.enable = false;
         };
-        xkb.layout = mkDefault "es"; # TODO: Set proper layout
       };
     };
   };

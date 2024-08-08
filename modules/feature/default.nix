@@ -13,6 +13,7 @@ with lib;
     ./cross_compilation.nix
     ./home_manager.nix
     ./fonts.nix
+    ./layout.nix
     ./s3ql.nix
     ./secrets.nix
     ./security.nix
