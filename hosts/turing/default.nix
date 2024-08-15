@@ -44,7 +44,6 @@
       virtualization = {
         flatpak.enable = true;
         waydroid.enable = true;
-        distrobox.enable = true;
       };
     };
     filesystem = {
