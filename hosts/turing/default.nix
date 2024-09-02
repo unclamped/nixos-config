@@ -24,7 +24,7 @@
       secrets.enable = true;
       keeblayout = {
         layout = "es";
-        variant = "nodeadkeys";
+        variant = "";
       };
       gaming = {
         gamemode.enable = true;
